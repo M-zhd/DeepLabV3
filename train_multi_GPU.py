@@ -50,7 +50,7 @@ def get_transform(train):
 
 def create_model(aux, num_classes):
     model = deeplabv3_resnet50(aux=aux, num_classes=num_classes)
-    weights_dict = torch.load("./deeplabv3_resnet50_coco.pth", map_location='cpu')
+    weights_dict = torch.load("./model/deeplabv3_resnet50_coco.pth", map_location='cpu')
 
     if num_classes != 21:
         # 官方提供的预训练权重是21类(包括背景)
